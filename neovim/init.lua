@@ -23,81 +23,17 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  spec = {
-    -- add your plugins here
 
-    -- catppucin theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
-    -- telescope
-    { 
-      'nvim-telescope/telescope.nvim', tag = '0.1.8',
-      dependencies = { 'nvim-lua/plenary.nvim' },
-    },
-
-    -- treesitter
-    {
-      "nvim-treesitter/nvim-treesitter",
-      branch = "master",
-      lazy = false,
-      build = ":TSUpdate",
-    },
-
-    -- Neo-tree
-    {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, but recommended
-    },
-    lazy = false, -- neo-tree will lazily load itself
-    }
-
-    --
-  },
+  spec = "plugins",
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
+  install = { colorscheme = { "catppuccin" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
 })
-
--- Load catpuccin theme
-require("catppuccin").setup({
-  flavour = "mocha", -- latte, frappe, macchiato, mocha
-  transparent_background = true,
-  integrations = {
-    treesitter = true,
-    cmp = true,
-    gitsigns = true,
-    telescope = true,
-    nvimtree = true,
-    which_key = true,
-  },
-})
-
--- Load treesitter
-require("nvim-treesitter.configs").setup({
-  ensure_installed = {
-    "lua", "python", "bash", "hyprlang","css","json",
-  },
-  highlight = { enabled = true },
-  indent = { enable = true },
-})
-
--- Theme
-vim.cmd.colorscheme("catppuccin")
 
 -- Tab rules
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-
---Telescope Rules
-local builtin = require("telescope.builtin")
-
--- Neo-tree
-vim.keymap.set('n', '<C-n>', ':Neotree filesystem toggle left<CR>')
