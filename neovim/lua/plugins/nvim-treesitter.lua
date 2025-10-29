@@ -6,9 +6,12 @@ return {
   config = function()
     require("nvim-treesitter").setup({
       ensure_installed = {
-      "lua", "python", "bash", "hyprlang", "css", "json", "javascript", 
+      "lua", "python", "bash", "hyprlang", "css", "json", "javascript",
       },
-      highlight = { enabled = true },
+      highlight = {
+        enabled = true,
+        additional_vim_regex_highlighting = false,
+      },
       indent = { enable = true },
     })
   end,
