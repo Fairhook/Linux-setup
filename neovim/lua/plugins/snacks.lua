@@ -145,8 +145,6 @@ return {
       { "<leader>gbr", function() require("snacks").picker.git_branches({layout = "select"}) end,      desc = "pick and switch git branches" },
       { "<leader>th", function() require("snacks").picker.colorschemes({layout = "ivy"}) end,          desc = "pick color schemes" },
       { "<leader>vh", function() require("snacks").picker.help() end,                                  desc = "help pages" },
-      { "<leader>rN", function() require("snacks").rename.rename_file() end, desc = "fast rename current file" },
-      { "<leader>dB", function() require("snacks").bufdelete() end,          desc = "delete or close buffer (confirm)" },
     }
   },
   {
