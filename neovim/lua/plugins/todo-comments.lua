@@ -24,12 +24,12 @@ return {
 
 
     -- keymaps
-    vim.keymaps.set("n", "]t", function()
+    vim.keymap.set("n", "]t", function()
       todo_comments.jump_next()
     end, {desc = "next todo comment"})
 
-    vim.keymaps.set("n", "[t]", function()
+    vim.keymap.set("n", "[t]", function()
       todo_comments.jump_prev()
     end, {desc = "previous todo comment"})
-  end
+  end,
 }
