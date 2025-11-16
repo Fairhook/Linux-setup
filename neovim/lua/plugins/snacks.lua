@@ -4,12 +4,6 @@ return {
     priority = 1000,
     lazy = false,
     opts = {
-      explorer = {
-        enabled = true,
-        layout = {
-          cycle = false,
-        }
-      },
       quickfile = {
         enabled = true,
         exclude = {"latex"},
@@ -130,7 +124,6 @@ return {
     keys = {
       { "<leader>lg", function() require("snacks").lazygit() end,            desc = "lazygit" },
       { "<leader>gl", function() require("snacks").lazygit.log() end,        desc = "lazygit logs" },
-      { "<leader>es", function() require("snacks").explorer() end,           desc = "open snacks expolrer" },
       { "<leader>rN", function() require("snacks").rename.rename_file() end, desc = "fast rename current file" },
       { "<leader>dB", function() require("snacks").bufdelete() end,          desc = "delete or close buffer (confirm)" },
 
