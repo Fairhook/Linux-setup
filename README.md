@@ -39,10 +39,9 @@ This document tracks the configuration and progress of my custom Arch Linux setu
 - Config file location: `~/.config/waybar/config`
 - Style file: `~/.config/waybar/style.css`
 - Current modules:
-  - [ ] Workspaces
-  - [ ] Clock
-  - [ ] Network
-  - [ ] Battery
+  - [x] Workspaces
+  - [x] Clock
+  - [x] Battery
 - TODO:
   - [ ] Add CPU/RAM monitor
   - [ ] Theming with CSS
